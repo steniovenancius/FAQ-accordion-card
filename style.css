@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
+}
+
+:root {
+    /* Gradient */
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+
+    /* Dividers */
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+
+    /* Primary Colors */
+    /* Text */
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+
+    /* Neutral Colors */ 
+    /* Text */ 
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(var(--Soft-violet), var(--Soft-blue));
+}
+
+main {
+    max-width: 1440px;
+    width: 70%;
+    height: auto;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 35vw auto;
+    gap: 10px;
+    background-color: var(--Light-grayish-blue);
+    box-shadow: 15px 20px 30px 2px var(--Very-dark-desaturated-blue);
+}
+
+section#images {
+    height: 470px;
+    border: 1px solid red;
+    position: relative;
+    background: url(./images/bg-pattern-desktop.svg);
+    background-size: 700px;
+    background-position: -350px -125px;
+    background-repeat: no-repeat;
+}
+
+
+section#images > #box {
+    width: 180px;
+    height: 110px;
+    position: absolute;
+    top: 200px;
+    left: -85px;
+    z-index: 2;
+
+}
+
+section#images > #box img{
+    width: 180px;
+}
+
+section#images > #woman {
+    width: 420px;
+    height: 420px;
+    border-radius: 20px;
+    position: relative;
+    top: 90px;
+    left: 0px;
+    overflow: hidden;
+}
+
+section#images > #woman img {
+    width: 410px;
+    position: absolute;
+    right: 80px;
+}
+
+section#faq {
+    background-color: aqua;
+}
