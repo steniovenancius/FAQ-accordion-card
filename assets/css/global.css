@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(hsl(273,75%, 66%), hsl(240, 73%, 65%));
+}
+
+main {
+    margin: 10rem 1.5rem 3rem;
+    position: relative;
+}
+
+/* Imagens */
+#images {
+    width: 100%;
+    position: absolute;
+}
+
+#womanMobile {
+    height: 200px;
+    position: absolute;
+    bottom: 72%;
+    left: 16%;
+    z-index: 2;
+    transform: translate(0px, 50px);
+}
+
+#patternMobile {
+    height: 120px;
+    position: relative;
+    top: 10px;
+    left: 20%;
+    transform: translate(-15px, -10px);
+}
+
+#box, #woman, #patternDesktop {
+    display: none;
+}
+
+/* FAQ */
+#faq {
+    display: flex;
+    flex-direction: column;
+    padding: 7rem 1.2rem 1rem 1.2rem;
+    border-radius: 1rem;
+    background-color:#fff;
+}
+
+/* Configuração do Título */
+#faq h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color:  hsl(238, 29%, 16%);
+}
+
+/* Configuração dos containers de Pergunta e Resposta */
+#faq details {
+    font-size: .9rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+} 
+
+details[open] summary {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color:  hsl(238, 29%, 16%);
+}
+
+/* Removendo a borda do Ultimo elemento */
+#faq details:nth-child(5) {
+    border-bottom: none;
+}
+/* Configuração das perguntas */
+#faq summary {
+    list-style-type: none;
+}
+
+/* Configuração das Setas */
+summary::after {
+    content: url(/images/icon-arrow-down.svg);
+    float: right;
+}
+
+details[open] summary::after {
+    transform:scaleY(-1);
+}
+
+/* Configuração dos parágrafos */
+#faq p {
+    padding-right: 2rem;
+    font-size: 0.8rem;
+    color:hsl(240, 6%, 50%);
+}
+
+
+@media screen and (min-width: 360px) and (max-width: 412px) {
+    /* Imagem Prncipal */
+    #womanMobile {
+        left: 50%;
+        transform: translate(-50%, 25%);
+    }
+
+    /* Sombra da Imagem */
+    #patternMobile {
+        left: 50%;
+        transform: translate(-50%, -10%);
+    }
+}
+
+@media screen and (min-width: 413px) and (max-width: 500px){
+    /* Imagem Prncipal */
+    #womanMobile {
+        height: 240px;
+        left: 50%;
+        transform: translate(-50%, 25%);
+    }
+
+    /* Sombra da Imagem */
+    #patternMobile {
+        height: 140px;
+        left: 50%;
+        transform: translate(-50%, -10%);
+    }
+
+    /* textos */
+    #faq details {
+        font-size: 1rem;
+    }
+
+    #faq p {
+        font-size: .9rem;
+        padding-right: 3rem;
+    }
+
+}
+
+@media screen and (min-width: 500px) and (max-width: 790px){
+    main {
+        margin-top: 11rem;
+    }
+    /* Imagem Prncipal */
+    #womanMobile {
+        height: 280px;
+        left: 50%;
+        transform: translate(-50%, 25%);
+    }
+
+    /* Sombra da Imagem */
+    #patternMobile {
+        height: 160px;
+        left: 50%;
+        transform: translate(-50%, -12%);
+    }
+
+    /* Seção Faq */
+    #faq {
+        padding-top: 9rem;
+    }
+
+    /* textos */
+    #faq {
+        padding-top: 8rem;
+    }
+
+    #faq h1 {
+        font-size: 3rem;
+    }
+
+    #faq details {
+        font-size: 1.2rem;
+    }
+
+    #faq p {
+        font-size: 1.1rem;
+        padding-right: 5rem;
+    }
+    
+}
+
+@media screen and (min-width: 791px) and (max-width: 990px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #images {
+        position: relative;
+        border-radius: 1rem 0 0 1rem;
+        background-color: #fff;
+    }
+   
+    #womanMobile, #patternMobile, #patternDesktop {
+        display: none;
+    }
+
+    #box, #woman {
+        border: 1px solid red;
+        display: flex;
+        position: absolute;
+    }
+
+    #box {
+        height: 120px;
+    }
+
+    #woman {
+        height: 280px;
+        top: 50%;
+        right: 10%;
+        transform: translate(0, -50%);
+    }
+
+    #faq {
+        padding: 2.5rem 2rem 2.5rem 0;
+        border-radius: 0 1rem 1rem 0;
+    }
+}
+
+
+
